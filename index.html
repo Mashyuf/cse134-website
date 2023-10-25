@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico"/>
+    <link rel="icon" href="favicon.ico">
     <title>Personal Website</title>
 
     <style>
@@ -77,8 +77,8 @@
         <table>
             <caption>Playing around with some html tags</caption>
             <colgroup>
-                <col/>
-                <col/>
+                <col>
+                <col>
             </colgroup>
             <tr>
                 <th>This table is a list of</th>
@@ -90,7 +90,7 @@
                 </td>
                 <td>
                     <label for="colors_select">Select the color:</label>
-                    <input list="colors_list" id="colors_select"/>
+                    <input list="colors_list" id="colors_select">
                     <datalist id="colors_list">
                         <option value="red"></option>
                         <option value="blue"></option>
@@ -118,7 +118,7 @@ for(i = 1; i &lt; 4; i++) {
             <tr>
                 <td>
                     <video controls>
-                        <source src=""/>
+                        <source src="">
                     </video>
                 </td>
                 <td>
@@ -139,7 +139,17 @@ for(i = 1; i &lt; 4; i++) {
                         <circle cx="150" cy="100" r="50"></circle>
                     </svg>
                 </td>
-                <td></td>
+                <td>
+                    <math>
+                        <mi>E</mi>
+                        <mo>=</mo>
+                        <mi>m</mi>
+                        <msup>
+                            <mi>c</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </math>
+                </td>
             </tr>
         </table>
 
@@ -158,11 +168,11 @@ for(i = 1; i &lt; 4; i++) {
                 <legend>Personal Information</legend>
                 <label>
                     Name:
-                    <input type="text" name="Name"/>
+                    <input type="text" name="Name">
                 </label>
                 <label>
                     Email:
-                    <input type="email" name="Email"/>
+                    <input type="email" name="Email">
                 </label>
                 <label for="current_position">Current Position:</label>
                 <select id="current_position">
@@ -197,7 +207,7 @@ for(i = 1; i &lt; 4; i++) {
             </fieldset>
             <fieldset>
                 <legend>Question</legend>
-                <input type="text" name="Question" placeholder="Enter your question here"/>
+                <input type="text" name="Question" placeholder="Enter your question here">
             </fieldset>
             <button>Send</button>
         </form>
