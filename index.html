@@ -11,16 +11,12 @@
             border: solid lightgray;
         }
     </style>
-
-    <script>
-        
-    </script>
 </head>
 <body>
     <h1>HELLO! MY NAME IS <span style="color: blue;">MATTHEW FANG</span></h1>
     <h2>Welcome to my website!</h2>
     <figure>
-        <img src="Matthew.jpg" alt="Picture of Matthew Fang" width="125px" height="160px">
+        <img src="Matthew.jpg" alt="Picture of Matthew Fang" width="125" height="160">
         <figcaption>Matthew Fang</figcaption>
     </figure>
 
@@ -133,6 +129,9 @@ console.log(i);
                 <td>
                     <iframe id="embed_youtube" width="300" height="200" src=""></iframe>
                 </td>
+                <td>
+                    <canvas id="canvas" width="300" height="200"></canvas>
+                </td>
             </tr>
         </table>
 
@@ -195,5 +194,11 @@ console.log(i);
             <button>Send</button>
         </form>
     </footer>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    </script>
 </body>
 </html>
