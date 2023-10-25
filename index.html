@@ -20,7 +20,7 @@
     <h1>HELLO! MY NAME IS <span style="color: blue;">MATTHEW FANG</span></h1>
     <h2>Welcome to my website!</h2>
     <figure>
-        <img src="Matthew.jpg" alt="Picture of Matthew Fang" width="10%" height="15%">
+        <img src="Matthew.jpg" alt="Picture of Matthew Fang" width="125px" height="160px">
         <figcaption>Matthew Fang</figcaption>
     </figure>
 
@@ -74,9 +74,10 @@
             </details>
         </section>
     </main>
-    <br><br>
+    <br><hr><br>
 
     <section id="Experimentals">
+        <h3>Experimentals</h3>
         <table>
             <caption>Playing around with some html tags</caption>
             <colgroup>
@@ -128,6 +129,11 @@ console.log(i);
                     <audio controls src=""></audio>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <iframe id="embed_youtube" width="300" height="200" src=""></iframe>
+                </td>
+            </tr>
         </table>
 
         <template id="template1">
@@ -137,58 +143,57 @@ console.log(i);
             </tr>
         </template>
     </section>
-    <br><br><br><br>
+    <br><br><hr><br><br>
+    <footer>
+        <form>
+            <strong>Ask me a question!</strong>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>
+                    Name:
+                    <input type="text" name="Name"/>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="Email"/>
+                </label>
+                <label for="current_position">Current Position:</label>
+                <select id="current_position">
+                    <option value="student">Student</option>
+                    <option value="recruiter">Recruiter</option>
+                    <option value="acamedia">Adcademic Positions</option>
+                    <option value="admin">Administrative Positions</option>
+                    <option value="others">Others</option>
+                </select>
+                <label for="current_location">Current Location:</label>
+                <select id="current_location">
+                    <optgroup label="North America">
+                        <option value="us">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="other_na">Other North American Countries</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                        <option value="taiwan">Taiwan</option>
+                        <option value="china">China</option>
+                        <option value="japan">Japan</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="other_asia">Other Asian Countries</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                        <option value="uk">United Kingdom</option>
+                        <option value="germany">Germany</option>
+                        <option value="france">France</option>
+                        <option value="other_europe">Other European Countries</option>
+                    </optgroup>
+                    <option value="other">Other Countries in the World</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Question</legend>
+                <input type="text" name="Question" placeholder="Enter your question here"/>
+            </fieldset>
+            <button>Send</button>
+        </form>
+    </footer>
 </body>
-
-<footer>
-    <form>
-        <strong>Ask me a question!</strong>
-        <fieldset>
-            <legend>Personal Information</legend>
-            <label>
-                Name:
-                <input type="text" name="Name"/>
-            </label>
-            <label>
-                Email:
-                <input type="email" name="Email"/>
-            </label>
-            <label for="current_position">Current Position:</label>
-            <select id="current_position">
-                <option value="student">Student</option>
-                <option value="recruiter">Recruiter</option>
-                <option value="acamedia">Adcademic Positions</option>
-                <option value="admin">Administrative Positions</option>
-                <option value="others">Others</option>
-            </select>
-            <label for="current_location">Current Location:</label>
-            <select id="current_location">Current Location:
-                <optgroup label="North America">
-                    <option value="us">USA</option>
-                    <option value="canada">Canada</option>
-                    <option value="other_na">Other North American Countries</option>
-                </optgroup>
-                <optgroup label="Asia">
-                    <option value="taiwan">Taiwan</option>
-                    <option value="china">China</option>
-                    <option value="japan">Japan</option>
-                    <option value="singapore">Singapore</option>
-                    <option value="other_asia">Other Asian Countries</option>
-                </optgroup>
-                <optgroup label="Europe">
-                    <option value="uk">United Kingdom</option>
-                    <option value="germany">Germany</option>
-                    <option value="france">France</option>
-                    <option value="other_europe">Other European Countries</option>
-                </optgroup>
-                <option value="other">Other Countries in the World</option>
-            </select>
-        </fieldset>
-        <fieldset>
-            <legend>Question</legend>
-            <input type="text" name="Question" placeholder="Enter your question here"/>
-        </fieldset>
-        <button>Send</button>
-    </form>
-</footer>
 </html>
