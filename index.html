@@ -55,19 +55,48 @@
 
         <section id="Experiences">
             <h3>Experiences</h3>
+            <ol>
+                <li>
+                    <b>UNDERGRADUATE ECONOMICS SOCIETY IN UCSD: VP FOR TECHNOLOGOICAL OPERATION COMMITTEE</b>
+                    <br>
+                    <i>July 2023 to Present</i>
+                    <p>
+                        <em>Developing</em> a website that displayed information about the club.
+                        <em>Directing</em> the member of the committee to complete tasks and strive for the common mission.
+                        <em>Collaborating</em> with other committees to prepare for the annual club event.
+                        <em>Conducting</em> weekly committee meetings to create new ideas and discussion points.
+                        <em>Recruiting</em> new members to join the committee.
+                        <em>Analyzing</em> survey data and discovering trends that could be used to propel the club.
+
+                    </p>
+                </li>
+                <li>
+                    <b>UNDERGRADUATE ECONOMICS SOCIETY IN UCSD: MEMBER OF TECHNOLOGICAL OPERATIONS COMMITTEE</b>
+                    <br>
+                    <i>January 2023 to June 2023</i>
+                    <p>
+                        Developing a website that displayed information about the club.
+                        Cooperating with other members to perfect the project and improve its functions.
+                        Collaborating with other committees to prepare for the annual club event.
+                        Creating new ideas and discussion points during weekly meetings.
+                    </p>
+                </li>
+            </ol>
         </section>
         <br><br>
 
         <section id="Skills">
             <h3>Skills</h3>
-            <details>
-                <summary>Language Skills</summary>
-                Chinese, English, Japanese
-            </details>
-            <details>
-                <summary>Computer Skills</summary>
-                Java, C, C++, Python, Javascript, CSS, HTML, R, STATA, Microsoft Excel, Google Sheets
-            </details>
+            <div>
+                <details>
+                    <summary>Language Skills</summary>
+                    Chinese, English, Japanese
+                </details>
+                <details>
+                    <summary>Computer Skills</summary>
+                    Java, C, C++, Python, Javascript, CSS, HTML, R, STATA, Microsoft Excel, Google Sheets
+                </details>
+            </div>
         </section>
     </main>
     <br><hr><br>
@@ -118,16 +147,16 @@ for(i = 1; i &lt; 4; i++) {
             <tr>
                 <td>
                     <video controls>
-                        <source src="">
+                        <source src="sample_video.mp4" type="video/mp4">
                     </video>
                 </td>
                 <td>
-                    <audio controls src=""></audio>
+                    <audio controls src="sample_audio.mp3"></audio>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <iframe id="embed_youtube" width="300" height="200" src=""></iframe>
+                    <iframe id="embed_youtube" width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
                 </td>
                 <td>
                     <canvas id="canvas" width="300" height="200"></canvas>
@@ -149,6 +178,19 @@ for(i = 1; i &lt; 4; i++) {
                             <mn>2</mn>
                         </msup>
                     </math>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <picture>
+                        <source srcset="bear.jpg" width="200" height="100" media="(orientation: portrait)">
+                        <img src="deer.jpg" width="300" height="200" alt="Deer">
+                    </picture>
+                </td>
+                <td>
+                    <aside>
+                        put this aside
+                    </aside>
                 </td>
             </tr>
         </table>
@@ -211,6 +253,7 @@ for(i = 1; i &lt; 4; i++) {
             </fieldset>
             <button>Send</button>
         </form>
+        <h4>&copy; Matthew Fang 2023</h4>
     </footer>
     <script>
         const canvas = document.getElementById("canvas");
