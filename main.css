@@ -1,0 +1,35 @@
+html {
+    background-color: rgb(229, 246, 252);
+}
+
+p {
+    width: 60dvw;
+}
+
+#Experiences li {
+    border: 1rem black;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    flex: auto;
+    margin: 10px;
+    width: 15dvw;
+    padding: 15px;
+    display: grid;
+    border: 0.1em solid black;
+    background-color: lightgray;
+}
+
+nav ul li a{
+    text-align: center;
+    font-size: large;
+}
+
