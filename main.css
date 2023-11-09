@@ -1,30 +1,28 @@
-/* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1500,14,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-    --step--2: clamp(0.56rem, 0.6204rem + -0.0644vw, 0.6075rem);
-    --step--1: clamp(0.7rem, 0.7373rem + -0.0398vw, 0.7294rem);
-    --step-0: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-    --step-1: clamp(1.05rem, 1.0381rem + 0.0593vw, 1.0938rem);
-    --step-2: clamp(1.26rem, 1.2308rem + 0.1458vw, 1.3675rem);
-    --step-3: clamp(1.5119rem, 1.4585rem + 0.2669vw, 1.7088rem);
-    --step-4: clamp(1.8144rem, 1.7271rem + 0.4364vw, 2.1363rem);
-    --step-5: clamp(2.1775rem, 2.0439rem + 0.6678vw, 2.67rem);
+    --background-color: white;
+}
+
+@font-face {
+    font-family: "Swansea";
+    src: url(Swansea-q3pd.ttf);
 }
 
 html {
     background-color: rgb(229, 246, 252);
-}
-
-p {
-    width: 60dvw;
+    font-family: "Swansea", serif;
 }
 
 #Experiences li {
-    border: 1rem black;
+    width: 55dvw;
 }
 
 h1, h2 {
     text-align: center;
+}
+
+h1:has(+ h2) {
+    margin-bottom: 2%;
 }
 
 nav ul{
@@ -38,12 +36,64 @@ nav ul li{
     width: 15dvw;
     padding: 15px;
     display: grid;
-    border: 0.1em solid black;
+    border: 0.1em solid color(xyz 0 0 0 );
     background-color: lightgray;
 }
 
 nav ul li a{
     text-align: center;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
+nav ul li:hover {
+    background-color: var(--background-color);
+    outline: solid 0.2rem black;
+    transition: outline 1s;
+}
+
+nav ul li a:hover {
+    background-color: var(--background-color);
+}
+
+picture img{
+    float: right;
+    width: 25dvw;
+    height: 32dvw;
+    margin-right: 7%;
+    margin-bottom: 5%;
+}
+
+p {
+    line-height: 150%;
+    width: 60dvw;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        float: right;
+    }
+
+    nav ul{
+        display: grid;
+        justify-content: end;
+        margin-top: 0;
+    }
+
+    nav ul li{
+        width: 20dvw;
+        margin: 15px 10px;
+    }
+
+    nav ul li a{
+        font-size: 1rem;
+    }
+
+    picture img {
+        float: none;
+        width: 35dvw;
+        height: 45dvw;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%
+    }
+}
