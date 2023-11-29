@@ -97,6 +97,11 @@ form fieldset output{
     color: red;
 }
 
+form fieldset input:user-invalid + output, 
+form fieldset textarea:user-invalid + output{
+    visibility: visible;
+}
+
 form output{
     display: block;
     margin-top: 2%;

@@ -214,13 +214,14 @@ for(i = 1; i &lt; 4; i++) {
                 <label for="name">
                     Name:
                 </label>
-                <input type="text" name="Name" id="name">
+                <input type="text" name="name" id="name" required>
                 <output>This field is required</output>
                 <label for="email">
                     Email:
                 </label>
-                <input type="email" name="Email" id="email">
+                <input type="email" name="email" id="email" required>
                 <output>This field is required</output>
+                <input type="text" name="possible_bot" id="possible_bot" value="true" style="display: none;">
                 <!--<label for="current_position">Current Position:</label>
                 <select id="current_position">
                     <option value="student">Student</option>
@@ -255,11 +256,11 @@ for(i = 1; i &lt; 4; i++) {
             <fieldset>
                 <legend>Comment</legend>
                 <label for="comment">Comment:</label>
-                <input type="text" name="Comment" id="comment" placeholder="Enter your comment here">
+                <input type="text" name="comment" id="comment" placeholder="Enter your comment here" minlength="10" pattern="^[A-Za-z0-9]+$" required>
                 <output>This field is required</output>
             </fieldset>
             <button>Send</button>
-            <output style="/*color: rgb(229, 246, 252)*/"><b>Please enter a valid email address</b></output>
+            <output id="valid_email" style="visibility: hidden;"><b>Please enter a valid email address</b></output>
             <br>
             <output style="margin-top: -4%;"><b>We value your comments!</b></output>
         </form>
