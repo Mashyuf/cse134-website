@@ -6,6 +6,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="main.css">
     <title>Personal Website</title>
+    <script src="validate.js"></script>
 
     <style>
         table, td {
@@ -215,12 +216,12 @@ for(i = 1; i &lt; 4; i++) {
                     Name:
                 </label>
                 <input type="text" name="name" id="name" required>
-                <output>This field is required</output>
+                <output><span>placeholder</span></output>
                 <label for="email">
                     Email:
                 </label>
                 <input type="email" name="email" id="email" required>
-                <output>Invalid Entry</output>
+                <output><span>placeholder</span></output>
                 <input type="text" name="possible_bot" id="possible_bot" value="true" style="display: none;">
                 <!--<label for="current_position">Current Position:</label>
                 <select id="current_position">
@@ -259,18 +260,18 @@ for(i = 1; i &lt; 4; i++) {
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment here" minlength="10" pattern="^[A-Za-z0-9 ]+$" required>
                 <output>Invalid entry</output>
             </fieldset>
-            <button>Send</button>
+            <button id="submit">Send</button>
             <output id="valid_email" style="visibility: hidden;"><b>Please enter a valid email address</b></output>
             <br>
             <output style="margin-top: -4%;"><b>We value your comments!</b></output>
         </form>
         <h4>&copy; Matthew Fang 2023</h4>
     </footer>
-    <script>
+    <!--<script>
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
         ctx.fillStyle = "blue";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-    </script>
+    </script>-->
 </body>
 </html>

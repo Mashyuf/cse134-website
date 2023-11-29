@@ -100,6 +100,7 @@ form fieldset output{
 form fieldset input:user-invalid + output, 
 form fieldset textarea:user-invalid + output{
     visibility: visible;
+    content: 'xdd';
 }
 
 form output{
@@ -108,7 +109,7 @@ form output{
 }
 
 form button{
-    width: 40%;
+    width: 35%;
     font-size: 1rem;
 }
 
