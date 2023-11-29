@@ -207,19 +207,21 @@ for(i = 1; i &lt; 4; i++) {
     </section>
     <br><br>
     <footer>
-        <form>
-            <strong>Ask me a question!</strong>
+        <form action="https://httpbin.org/post" method="POST">
+            <strong style="width: 100%">Send me a message!</strong>
             <fieldset>
                 <legend>Personal Information</legend>
-                <label>
+                <label for="name">
                     Name:
-                    <input type="text" name="Name">
                 </label>
-                <label>
+                <input type="text" name="Name" id="name">
+                <output>This field is required</output>
+                <label for="email">
                     Email:
-                    <input type="email" name="Email">
                 </label>
-                <label for="current_position">Current Position:</label>
+                <input type="email" name="Email" id="email">
+                <output>This field is required</output>
+                <!--<label for="current_position">Current Position:</label>
                 <select id="current_position">
                     <option value="student">Student</option>
                     <option value="recruiter">Recruiter</option>
@@ -248,13 +250,18 @@ for(i = 1; i &lt; 4; i++) {
                         <option value="other_europe">Other European Countries</option>
                     </optgroup>
                     <option value="other">Other Countries in the World</option>
-                </select>
+                </select>-->
             </fieldset>
             <fieldset>
-                <legend>Question</legend>
-                <input type="text" name="Question" placeholder="Enter your question here">
+                <legend>Comment</legend>
+                <label for="comment">Comment:</label>
+                <input type="text" name="Comment" id="comment" placeholder="Enter your comment here">
+                <output>This field is required</output>
             </fieldset>
             <button>Send</button>
+            <output style="/*color: rgb(229, 246, 252)*/"><b>Please enter a valid email address</b></output>
+            <br>
+            <output style="margin-top: -4%;"><b>We value your comments!</b></output>
         </form>
         <h4>&copy; Matthew Fang 2023</h4>
     </footer>

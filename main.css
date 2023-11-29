@@ -68,6 +68,46 @@ p {
     width: 60dvw;
 }
 
+footer {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+form {  
+    width: 100%;
+    text-align: center;
+}
+
+form fieldset {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    display: grid;
+}
+
+form fieldset label{
+    display: grid;
+}
+
+form fieldset output{
+    margin: -0.8% 0;
+    visibility: hidden;
+    font-size: small;
+    text-align: center;
+    color: red;
+}
+
+form output{
+    display: block;
+    margin-top: 2%;
+}
+
+form button{
+    width: 40%;
+    /*position: relative;*/
+    font-size: 1rem;
+}
+
 @media screen and (max-width: 900px) {
     nav {
         float: right;
