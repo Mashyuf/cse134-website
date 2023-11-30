@@ -257,8 +257,9 @@ for(i = 1; i &lt; 4; i++) {
             <fieldset>
                 <legend>Comment</legend>
                 <label for="comment">Comment:</label>
-                <input type="text" name="comment" id="comment" placeholder="Enter your comment here" minlength="10" pattern="^[A-Za-z0-9 ]+$" required>
-                <output>Invalid entry</output>
+                <textarea type="text" name="comment" id="comment" placeholder="Enter your comment here" minlength="10" required></textarea>
+                <output id="errorMsgComment"><span>placeholder</span></output>
+                <output id="wordCountdown" style="visibility: visible; color: black;"><span>100 Characters Remaining</span></output>
             </fieldset>
             <button id="submit">Send</button>
             <output id="valid_email" style="visibility: hidden;"><b>Please enter a valid email address</b></output>
