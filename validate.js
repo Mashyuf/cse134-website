@@ -79,17 +79,23 @@ function wordCountdown() {
         errorMsgComment.textContent = 'You have exceeded the character limit';
         errorMsgComment.style.visibility = 'visible';
     }
-
-    console.log(comment.value.length);
 }
 
 window.addEventListener('load', function() {
     let button = document.getElementById('submit');
     let form = this.document.querySelector('form');
     let name = document.getElementById('name');
+    let bots = document.getElementById('possible_bot');
     let form_errors = [];
     button.onclick = function() {
         validate();
+        if(!name.validity.valid) {
+            form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
+        } else if(!email.validity.valid) {
+            form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
+        } else if(!comment.validity.valid) {
+            form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
+        }
     };
 
     let email = document.getElementById('email');
@@ -103,25 +109,18 @@ window.addEventListener('load', function() {
         wordCountdown();
     });
 
-    name.addEventListener('invalid', (e) => {
-        form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
-        console.log(form_errors);
-    });
-
-    email.addEventListener('invalid', (e) => {
-        form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
-        console.log(form_errors);
-    });
-
-    comment.addEventListener('invalid', (e) => {
-        form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
-        console.log(form_errors);
-    });
-
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log('prevented');
+        let payload = new FormData();
+        payload.append('name', name.value);
+        payload.append('email', email.value);
+        payload.append('comment', comment.value);
+        payload.append('form_errors', form_errors);
+        payload.append('possible_bot', bots.value);
 
-
-    })
+        this.fetch("https://httpbin.org/post", {
+            method: 'POST',
+            body: payload,
+        });
+    });
 });
