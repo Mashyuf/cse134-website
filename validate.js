@@ -76,7 +76,6 @@ function wordCountdown() {
 
     if(charRemain < 0) {
         wordCountdown.style.color = 'red';
-        console.log('oi');
         errorMsgComment.textContent = 'You have exceeded the character limit';
         errorMsgComment.style.visibility = 'visible';
     }
@@ -86,6 +85,9 @@ function wordCountdown() {
 
 window.addEventListener('load', function() {
     let button = document.getElementById('submit');
+    let form = this.document.querySelector('form');
+    let name = document.getElementById('name');
+    let form_errors = [];
     button.onclick = function() {
         validate();
     };
@@ -100,4 +102,26 @@ window.addEventListener('load', function() {
         validateComment();
         wordCountdown();
     });
+
+    name.addEventListener('invalid', (e) => {
+        form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
+        console.log(form_errors);
+    });
+
+    email.addEventListener('invalid', (e) => {
+        form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
+        console.log(form_errors);
+    });
+
+    comment.addEventListener('invalid', (e) => {
+        form_errors.push(JSON.stringify({name: name.value, email: email.value, comment: comment.value}));
+        console.log(form_errors);
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log('prevented');
+
+
+    })
 });
