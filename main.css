@@ -25,6 +25,18 @@ h1:has(+ h2) {
     margin-bottom: 2%;
 }
 
+#theme_label {
+    visibility: hidden;
+    position: absolute;
+    left: 90%;
+}
+
+#theme_toggle {
+    visibility: hidden;
+    position: absolute;
+    left: 88%;
+}
+
 nav ul{
     display: flex;
     padding: 0;
@@ -147,4 +159,9 @@ form button{
         margin-bottom: 5%;
         margin-top: 5%
     }
+}
+
+.darkMode {
+    background-color: rgb(0, 0, 25);
+    color: white !important;
 }

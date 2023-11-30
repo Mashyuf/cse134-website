@@ -81,6 +81,14 @@ function wordCountdown() {
     }
 }
 
+function themeToggle() {
+    let body = document.body;
+    let html = document.querySelector('html');
+    let button = document.querySelector('button');
+    body.classList.toggle('darkMode');
+    html.classList.toggle('darkMode');
+}
+
 window.addEventListener('load', function() {
     let button = document.getElementById('submit');
     let form = this.document.querySelector('form');
@@ -123,4 +131,24 @@ window.addEventListener('load', function() {
             body: payload,
         });
     });
+
+    let toggle = document.getElementById('theme_toggle');
+    let toggleLabel = document.getElementById('theme_label');
+    toggle.style.visibility = 'visible';
+    toggleLabel.style.visibility = 'visible';
+
+    if (this.localStorage.getItem('theme') == 'dark') {
+        theme_toggle.checked = true;
+        themeToggle();
+    }
+
+    toggle.addEventListener('click', (e) => {
+        themeToggle();
+        if (theme_toggle.checked) {
+            this.localStorage.setItem('theme', 'dark');
+        } else {
+            this.localStorage.setItem('theme', 'light');
+        }
+    })
 });
+
