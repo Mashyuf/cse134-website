@@ -1,0 +1,30 @@
+rating-star {
+    color: grey;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+rating-star:hover {
+    color: yellow;
+}
+
+.clicked {
+    color: yellow;
+}
+
+.unclicked {
+    color: grey;
+}
+
+.weather {
+    background-color: lightblue;
+    border-radius: 5%;
+    width: 35%;
+    height: 20rem;
+}
+
+weather-widget {
+    display: grid;
+    font-size: 2.5rem;
+    text-align: center;
+}
