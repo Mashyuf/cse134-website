@@ -30,13 +30,13 @@ window.addEventListener('DOMContentLoaded', (e) => {
                     .catch(error => {
                         // Handle any errors
                         console.error('Fetch error:', error);
-                        output.textContent = 'Error fetching time';
+                        weather.shadowRoot.innerHTML = 'Error fetching weather';
                     });
 			})
 			.catch(error => {
 				// Handle any errors
 				console.error('Fetch error:', error);
-				weather.shadowRoot.innerHTML = 'Error fetching time';
+				weather.shadowRoot.innerHTML = 'Error fetching weather';
 			});
 });
 
