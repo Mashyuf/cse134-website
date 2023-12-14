@@ -86,3 +86,48 @@ function iconFinder(status) {
     }
 };
 
+/*let form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    form.innerHTML = 'Submitting your prediction';
+
+    let payload = new FormData;
+    payload.append('name', document.querySelector('input[type="text"]')).value;
+    payload.append('email', document.querySelector('input[type="email"]')).value;
+    payload.append('grade', document.querySelector('select')).value;
+
+    fetch('https://ucsd.edu/predicto', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json',
+            'X-sent-by': 'JS',
+        },
+        body: JSON.stringify(payload),
+    })
+        .then(response => {
+            if(!response.ok) {
+                throw new Error('Network response is not OK');
+            }
+            return response.json();
+        })
+        .then(data => {
+            form.innerHTML = 'Greetings' + data.name + 'your prediction' + data.outcome;
+        })
+        .catch(error => {
+            console.error('Fetch error:' + error);
+            form.innerHTML('Error fetching prediciont');
+        })
+});
+
+class currentTime extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({mode: open});
+
+        const time = document.createElement('time');
+        time.innerHTML = 'The time is ' + new Date();
+        this.shadowRoot.appendChild(time);
+    }
+}*/
